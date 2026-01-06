@@ -1,6 +1,7 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Calculator from '@/components/Calculator';
+import ContactForm from '@/components/ContactForm';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import Icon from '@/components/ui/icon';
@@ -358,40 +359,7 @@ const Index = () => {
               ))}
             </div>
 
-            <Card className="mt-12 animate-fade-in">
-              <CardContent className="pt-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Ваше имя</label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="Иван Иванов"
-                    />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">Телефон</label>
-                    <input
-                      type="tel"
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      placeholder="+7 (___) ___-__-__"
-                    />
-                  </div>
-                  <div className="md:col-span-2">
-                    <label className="block text-sm font-medium mb-2">Сообщение</label>
-                    <textarea
-                      className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
-                      rows={4}
-                      placeholder="Расскажите о вашем проекте..."
-                    />
-                  </div>
-                </div>
-                <Button className="w-full mt-6" size="lg">
-                  <Icon name="Send" className="mr-2" />
-                  Отправить заявку
-                </Button>
-              </CardContent>
-            </Card>
+            <ContactForm />
           </div>
         </div>
       </section>

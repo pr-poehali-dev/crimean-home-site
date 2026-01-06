@@ -1,0 +1,37 @@
+{
+  "tests": [
+    {
+      "name": "Создание заявки с валидными данными",
+      "method": "POST",
+      "body": {
+        "name": "Иван Петров",
+        "phone": "+7 (999) 123-45-67",
+        "message": "Хочу построить дом 150 м2"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {
+        "success": true,
+        "message": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Создание заявки без имени",
+      "method": "POST",
+      "body": {
+        "phone": "+7 (999) 123-45-67",
+        "message": "Тест"
+      },
+      "expectedStatus": 400,
+      "expectedBody": {
+        "error": "string"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Получение списка заявок",
+      "method": "GET",
+      "expectedStatus": 200
+    }
+  ]
+}
